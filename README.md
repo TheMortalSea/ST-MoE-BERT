@@ -8,10 +8,11 @@
 ✨ If you find this resource helpful, please consider citing our paper:
 
 ```bibtex
-@article{he2024st,
+@inproceedings{he2024st,
   title={ST-MoE-BERT: A Spatial-Temporal Mixture-of-Experts Framework for Long-Term Cross-City Mobility Prediction},
   author={He, Haoyu and Luo, Haozheng and Wang, Qi R},
-  journal={arXiv preprint arXiv:2410.14099},
+  booktitle={Proceedings of the 2nd ACM SIGSPATIAL International Workshop on Human Mobility Prediction Challenge},
+  pages={10--15},
   year={2024}
 }
 ```
