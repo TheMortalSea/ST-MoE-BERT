@@ -2,14 +2,16 @@
 
 # Setup for running training models for four different cities
 
-# Ensure CUDA devices are correctly assigned (assuming a multi-GPU setup)
-export CUDA_VISIBLE_DEVICES=0
+source "$(conda info --base)/etc/profile.d/conda.sh"
+
+# Activate conda environment
+conda activate ST-MoE-BERT
 
 # Define common parameters
 EPOCHS=30
 BASE_LR=0.0003
 MODEL_NAME="MobilityBERTMoE"
-MODEL_PATH="path_to_pretrained_model.pth"
+# MODEL_PATH="path_to_pretrained_model.pth" pretrained model can be downloaded on hugging face
 LOCATION_EMBEDDING_LR=0.0001  # This can be adjusted or removed if not needed
 
 # Training for City A
@@ -73,5 +75,5 @@ python main.py --model_name $MODEL_NAME \
                --lr $BASE_LR \
                --location_embedding_lr $LOCATION_EMBEDDING_LR \
                --num_epochs $EPOCHS \
-               --device "cuda:0" \
+               --device "mps" \
                --model_path $MODEL_PATH

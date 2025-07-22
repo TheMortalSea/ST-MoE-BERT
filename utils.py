@@ -20,9 +20,9 @@ def load_data(city='A'):
     Load data from csv file
     '''
     if city == 'A':
-        df = pd.read_csv('your_path_here/cityA_groundtruthdata.csv.gz', compression='gzip')
+        df = pd.read_csv('/Users/main/grad_school/dissertation/compressed_data/city_A_challengedata.csv.gz', compression='gzip')
     else:
-        df = pd.read_csv(f'your_path_here/city{city}_challengedata.csv.gz', compression='gzip')
+        df = pd.read_csv(f'Users/main/grad_school/dissertation/compressed_data/city{city}_challengedata.csv.gz', compression='gzip')
     
     users = sorted(list(df['uid'].unique()))
     predict_users = users[-3000:]
